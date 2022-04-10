@@ -57,8 +57,12 @@ class Educatio(models.Model):
 
 class project(models.Model):
     id = models.AutoField(primary_key=True)
+    Name=models.CharField(max_length=255,null=True,blank=True)
+    Client=models.CharField(max_length=255,null=True,blank=True)
+    Langages=models.CharField(max_length=255,null=True,blank=True)
     Image = models.ImageField(upload_to='projects', null=True, blank=True)
     Link = models.CharField(max_length=255,null=True,blank=True)
+    web=models.CharField(max_length=255,null=True,blank=True)
     objects = models.Manager()
 
 class datasend(models.Model):

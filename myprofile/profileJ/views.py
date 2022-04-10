@@ -27,7 +27,8 @@ def aboutV(request):
     return render(request,'about.html',context)
 
 def portfolioV(request):
-    return render(request,'portfolio.html')
+    projecta=project.objects.all()
+    return render(request,'portfolio.html',{'projecta':projecta})
 
 def contactV(request):
     persons = PersonalInfo.objects.all()
